@@ -11,14 +11,14 @@
 <body class="bg-slate-50 font-sans text-slate-800">
 
     <header class="bg-emerald-600 text-white shadow-md">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold">SmartUKS</h1>
-            <div class="space-x-2">
-                <button onclick="switchTab('siswa')" id="btnSiswa" class="bg-emerald-700 px-4 py-2 rounded-lg text-sm font-semibold transition">Form Siswa</button>
-                <button onclick="cekAksesAdmin()" id="btnAdmin" class="bg-emerald-800/50 px-4 py-2 rounded-lg text-sm font-semibold transition cursor-pointer">Dashboard UKS (Admin)</button>
-            </div>
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <h1 class="text-xl font-bold">SmartUKS</h1>
+        <div class="flex flex-wrap gap-2 justify-center">
+            <button onclick="switchTab('siswa')" id="btnSiswa" class="bg-emerald-700 px-4 py-2 rounded-lg text-sm font-semibold transition cursor-pointer">Form Siswa</button>
+            <button onclick="cekAksesAdmin()" id="btnAdmin" class="bg-emerald-800/50 px-4 py-2 rounded-lg text-sm font-semibold transition cursor-pointer">Dashboard UKS (Admin)</button>
         </div>
-    </header>
+    </div>
+</header>
 
     <main class="max-w-6xl mx-auto px-4 py-8">
         <section id="viewSiswa" class="space-y-6">
