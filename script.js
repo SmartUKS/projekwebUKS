@@ -115,12 +115,12 @@ async function muatDataSiswa() {
             let badgeColor = "bg-amber-100 text-amber-700";
             let pesanStatus = "Menunggu konfirmasi petugas UKS...";
             
-            if (item.status === 'Disetujui') {
+          if (item.status === 'Disetujui') {
                 badgeColor = "bg-emerald-100 text-emerald-700";
                 pesanStatus = "Permintaan anda telah disetujui, harap datang ke UKS";
             } else if (item.status === 'Ditolak') {
                 badgeColor = "bg-rose-100 text-rose-700";
-                pesanStatus = "Mohon maaf, stok obat kosong.";
+                pesanStatus = "✕ Mohon maaf, stok obat kosong atau permintaan ditolak.";
             }
 
             html += `
