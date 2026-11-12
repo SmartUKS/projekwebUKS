@@ -110,9 +110,15 @@ async function muatDataSiswa() {
             return;
         }
 
-        let html = '';
+        let listData = [];
         querySnapshot.forEach((docSnap) => {
-            const item = docSnap.data();
+            listData.push({ id: docSnap.id, ...docSnap.data() });
+        });
+
+        listData.sort((a, b) => (b.waktu || 0) - (a.waktu || 0));
+
+        let html = '';
+        listData.forEach((item) => {
             let badgeColor = "bg-amber-100 text-amber-700";
             let pesanStatus = "Menunggu konfirmasi petugas UKS...";
             
