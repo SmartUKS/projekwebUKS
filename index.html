@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Permintaan Obat UKS</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-slate-50 font-sans text-slate-800">
-
-    <header class="bg-emerald-600 text-white shadow-md">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-3">
-        <h1 class="text-xl font-bold">SmartUKS</h1>
-        <div class="flex flex-wrap gap-2 justify-center">
-            <button onclick="switchTab('siswa')" id="btnSiswa" class="bg-emerald-700 px-4 py-2 rounded-lg text-sm font-semibold transition cursor-pointer">Form Siswa</button>
-            <button onclick="cekAksesAdmin()" id="btnAdmin" class="bg-emerald-800/50 px-4 py-2 rounded-lg text-sm font-semibold transition cursor-pointer">Dashboard UKS (Admin)</button>
-        </div>
-    </div>
-</header>
-
-    <main class="max-w-6xl mx-auto px-4 py-8">
+<main class="max-w-6xl mx-auto px-4 py-8">
         <section id="viewSiswa" class="space-y-6">
             <div class="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
                 <h2 class="text-xl font-bold text-slate-700 mb-2">Formulir Permintaan Obat</h2>
@@ -53,38 +31,16 @@
                     <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2.5 rounded-xl transition">Kirim Permintaan</button>
                 </form>
             </div>
+
+            <div class="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-4">
+                <h3 class="text-lg font-bold text-slate-700">Status Permintaan Obat</h3>
+                <div id="statusListSiswa" class="space-y-3">
+                </div>
+            </div>
+
         </section>
 
         <section id="viewAdmin" class="hidden space-y-6">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div class="flex justify-between items-center mb-6">
-                    <div>
-                        <h2 class="text-xl font-bold text-slate-700">Daftar Masuk Permintaan Obat</h2>
-                        <p class="text-sm text-slate-500">Setujui jika obat tersedia, atau tolak jika stok kosong.</p>
-                    </div>
-                    
-                </div>
-
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="border-b text-slate-400 text-sm">
-                                <th class="pb-3 font-semibold">Nama / Kelas</th>
-                                <th class="pb-3 font-semibold">Keluhan</th>
-                                <th class="pb-3 font-semibold">Obat Diminta</th>
-                                <th class="pb-3 font-semibold">Status</th>
-                                <th class="pb-3 font-semibold text-center">Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabelAdmin" class="divide-y text-sm">
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            
         </section>
-
     </main>
-
-    <script type="module" src="script.js"></script>
-</body>
-</html>
