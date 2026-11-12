@@ -90,7 +90,8 @@ window.kirimPermintaan = async function(e) {
         });
 
         document.getElementById('formPermintaan').reset();
-        muatDataSiswa();
+        
+        muatDataSiswa(); 
     } catch (error) {
         console.error("Gagal mengirim data: ", error);
         Swal.fire({ icon: 'error', title: 'Oops...', text: 'Gagal mengirim permintaan!' });
@@ -115,7 +116,7 @@ async function muatDataSiswa() {
             let badgeColor = "bg-amber-100 text-amber-700";
             let pesanStatus = "Menunggu konfirmasi petugas UKS...";
             
-          if (item.status === 'Disetujui') {
+            if (item.status === 'Disetujui') {
                 badgeColor = "bg-emerald-100 text-emerald-700";
                 pesanStatus = "Permintaan anda telah disetujui, harap datang ke UKS";
             } else if (item.status === 'Ditolak') {
@@ -210,4 +211,5 @@ window.ubahStatus = async function(id, statusBaru) {
         Swal.fire({ icon: 'error', title: 'Gagal', text: 'Tidak dapat memperbarui status.' });
     }
 }
+
 muatDataSiswa();
