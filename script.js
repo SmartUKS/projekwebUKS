@@ -117,7 +117,7 @@ async function muatDataSiswa() {
             
             if (item.status === 'Disetujui') {
                 badgeColor = "bg-emerald-100 text-emerald-700";
-                pesanStatus = "Obat tersedia! Silakan segera ke ruangan UKS.";
+                pesanStatus = "Permintaan anda telah disetujui, harap datang ke UKS";
             } else if (item.status === 'Ditolak') {
                 badgeColor = "bg-rose-100 text-rose-700";
                 pesanStatus = "Mohon maaf, stok obat kosong.";
