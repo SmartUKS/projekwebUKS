@@ -90,7 +90,7 @@ window.kirimPermintaan = async function(e) {
         });
 
         document.getElementById('formPermintaan').reset();
-        
+
         muatDataSiswa(); 
     } catch (error) {
         console.error("Gagal mengirim data: ", error);
