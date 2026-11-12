@@ -1,0 +1,6 @@
+body {
+    background-color: #f8fafc;
+}
+section {
+    transition: all 0.3s ease-in-out;
+}
